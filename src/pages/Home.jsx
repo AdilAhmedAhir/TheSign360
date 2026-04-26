@@ -356,19 +356,13 @@ export default function Home() {
             >
               <span className="agency-card__badge">Partnered Agency</span>
               <div className="agency-card__logo-wrap agency-card__logo-wrap--sd">
-                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="sd-grad" x1="0" y1="0" x2="72" y2="72">
-                      <stop offset="0%" stopColor="#3b82f6"/>
-                      <stop offset="100%" stopColor="#2563eb"/>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="36" cy="36" r="34" stroke="url(#sd-grad)" strokeWidth="2.5" fill="none"/>
-                  <path d="M24 28 C24 22, 36 20, 36 28 C36 36, 48 34, 48 28" 
-                        stroke="#3b82f6" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
-                  <path d="M24 44 C24 38, 36 36, 36 44 C36 52, 48 50, 48 44" 
-                        stroke="#3b82f6" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
-                </svg>
+                <img
+                  src="/assets/partners/startdaily_logo.png"
+                  alt="Start Daily Logo"
+                  width="72"
+                  height="72"
+                  style={{ borderRadius: '50%', objectFit: 'contain' }}
+                />
               </div>
               <div className="agency-card__info">
                 <h3 className="agency-card__name">
