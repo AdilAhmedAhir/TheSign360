@@ -263,51 +263,91 @@ export default function Home() {
       {/* Partnered Agencies */}
       <AnimatedSection className="section agencies" id="agencies">
         <div className="container">
-          <motion.span className="section-label" variants={fadeUp}>Partnered Agencies</motion.span>
+          <motion.span className="section-label" variants={fadeUp}>Strategic Partnerships</motion.span>
+          <motion.h2 className="section-title" variants={fadeUp}>
+            Our Partnered <span className="text-accent">Agencies</span>
+          </motion.h2>
+          <motion.p className="section-subtitle" variants={fadeUp}>
+            We collaborate with industry-leading agencies to deliver exceptional results across every dimension of your brand.
+          </motion.p>
+
           <motion.div className="agencies__grid" variants={stagger}>
+            {/* Start Daily XYZ */}
             <motion.a
               href="https://www.facebook.com/startdailyxyz"
               target="_blank"
               rel="noopener noreferrer"
               className="agency-card"
               variants={fadeUp}
-              whileHover={{ y: -4 }}
+              whileHover={{ y: -6 }}
               id="agency-startdaily"
             >
-              <div className="agency-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              <span className="agency-card__badge">Partnered Agency</span>
+              <div className="agency-card__logo-wrap agency-card__logo-wrap--sd">
+                {/* Start Daily XYZ Logo — Blue gradient circle with intertwined SD */}
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="sd-grad" x1="0" y1="0" x2="72" y2="72">
+                      <stop offset="0%" stopColor="#3b82f6"/>
+                      <stop offset="100%" stopColor="#6366f1"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="36" cy="36" r="34" fill="url(#sd-grad)"/>
+                  <text x="36" y="44" textAnchor="middle" fontFamily="Outfit, sans-serif" fontWeight="800" fontSize="28" fill="#fff" letterSpacing="-1">
+                    SD
+                  </text>
                 </svg>
               </div>
-              <h3 className="agency-card__name">Start Daily XYZ</h3>
-              <p className="agency-card__desc">Digital media & content platform</p>
+              <div className="agency-card__info">
+                <h3 className="agency-card__name">
+                  <span className="agency-card__name-start">Start</span>{' '}
+                  <span className="agency-card__name-daily">Daily</span>
+                </h3>
+                <p className="agency-card__tagline">Start Today</p>
+                <p className="agency-card__desc">Digital media & content platform driving daily engagement and modern storytelling.</p>
+              </div>
               <span className="agency-card__arrow">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
                   <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
             </motion.a>
 
+            {/* The Auric Media */}
             <motion.a
               href="https://www.facebook.com/theauricmedia"
               target="_blank"
               rel="noopener noreferrer"
               className="agency-card"
               variants={fadeUp}
-              whileHover={{ y: -4 }}
+              whileHover={{ y: -6 }}
               id="agency-auricmedia"
             >
-              <div className="agency-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <span className="agency-card__badge">Partnered Agency</span>
+              <div className="agency-card__logo-wrap agency-card__logo-wrap--am">
+                {/* The Auric Media Logo — Sage green circle with topographic lines and blue figure */}
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="36" cy="36" r="34" fill="#c5d5a0"/>
+                  {/* Topographic lines */}
+                  <circle cx="36" cy="36" r="28" stroke="#8fa862" strokeWidth="0.5" fill="none" opacity="0.5"/>
+                  <circle cx="36" cy="36" r="22" stroke="#8fa862" strokeWidth="0.5" fill="none" opacity="0.4"/>
+                  <circle cx="36" cy="36" r="16" stroke="#8fa862" strokeWidth="0.5" fill="none" opacity="0.3"/>
+                  <ellipse cx="32" cy="34" rx="6" ry="10" stroke="#8fa862" strokeWidth="0.5" fill="none" opacity="0.4"/>
+                  {/* Blue abstract wings/figure */}
+                  <path d="M30 28 C28 22, 36 18, 36 24 C36 18, 44 22, 42 28 L36 34 Z" fill="#3b82f6"/>
+                  <path d="M30 36 C28 42, 36 46, 36 40 C36 46, 44 42, 42 36 L36 30 Z" fill="#2563eb"/>
+                  <text x="36" y="58" textAnchor="middle" fontFamily="Outfit, sans-serif" fontWeight="800" fontSize="6" fill="#1a1a1a" letterSpacing="0.5">
+                    THE AURIC MEDIA
+                  </text>
                 </svg>
               </div>
-              <h3 className="agency-card__name">The Auric Media</h3>
-              <p className="agency-card__desc">Media production & storytelling</p>
+              <div className="agency-card__info">
+                <h3 className="agency-card__name">The Auric Media</h3>
+                <p className="agency-card__tagline">We Tell Your Stories Visually</p>
+                <p className="agency-card__desc">Creative media production agency specializing in visual storytelling and brand narratives.</p>
+              </div>
               <span className="agency-card__arrow">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
                   <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>

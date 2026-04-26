@@ -395,7 +395,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .agency-card {
@@ -403,44 +403,134 @@
   padding: 2.5rem;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   transition: all var(--transition-smooth);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.agency-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
 }
 
 .agency-card:hover {
-  border-color: var(--color-accent);
+  border-color: var(--color-border-hover);
   background: var(--color-bg-card-hover);
+  transform: translateY(-4px);
 }
 
-.agency-card__icon {
+.agency-card:hover::before {
+  opacity: 1;
+}
+
+.agency-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 1rem;
+  background: var(--color-accent-subtle);
   color: var(--color-accent);
-  margin-bottom: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}
+
+.agency-card__logo-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.agency-card:hover .agency-card__logo-wrap {
+  transform: scale(1.08);
+}
+
+.agency-card__logo-wrap--sd {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+.agency-card:hover .agency-card__logo-wrap--sd {
+  box-shadow: 0 0 60px rgba(59, 130, 246, 0.25);
+}
+
+.agency-card__logo-wrap--am {
+  box-shadow: 0 0 40px rgba(139, 168, 98, 0.15);
+}
+
+.agency-card:hover .agency-card__logo-wrap--am {
+  box-shadow: 0 0 60px rgba(139, 168, 98, 0.25);
+}
+
+.agency-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
 }
 
 .agency-card__name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.agency-card__name-start {
+  color: var(--color-text-primary);
+}
+
+.agency-card__name-daily {
+  color: #a78bfa;
+}
+
+.agency-card__tagline {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  font-style: italic;
+  letter-spacing: 0.02em;
 }
 
 .agency-card__desc {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 320px;
+  margin: 0.25rem auto 0;
 }
 
 .agency-card__arrow {
   position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
+  top: 1.5rem;
+  right: 1.5rem;
   color: var(--color-text-muted);
   transition: all var(--transition-fast);
 }
 
 .agency-card:hover .agency-card__arrow {
   color: var(--color-accent);
-  transform: translate(2px, -2px);
+  transform: translate(3px, -3px);
 }
 
 /* Responsive */
