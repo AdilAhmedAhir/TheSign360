@@ -76,20 +76,6 @@ const projects = [
     desc: 'Fluid, organic brand identity for AND Studio that captures the studio\'s creative and collaborative spirit.',
     color: '#a855f7',
   },
-  {
-    title: 'Arolbade — Visual System',
-    category: 'Digital',
-    tags: ['Visual Identity', 'Typography', 'Digital Design'],
-    desc: 'Bold typographic identity system with vibrant color blocking for a modern digital-first brand.',
-    color: '#ec4899',
-  },
-  {
-    title: 'Start Daily XYZ — Digital Platform',
-    category: 'Marketing',
-    tags: ['Digital Marketing', 'Content Strategy', 'Social Media'],
-    desc: 'Comprehensive digital marketing and content strategy for Start Daily XYZ media platform.',
-    color: '#06b6d4',
-  },
 ]
 
 export default function Works() {
