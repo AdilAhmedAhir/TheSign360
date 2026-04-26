@@ -98,7 +98,7 @@ export default function Footer() {
           {/* Ventures */}
           <div className="footer__ventures">
             <div className="footer__ventures-row">
-              <a href="https://www.facebook.com/startdailyxyz" target="_blank" rel="noopener noreferrer" className="footer__venture-link" id="footer-startdaily">
+              <a href="https://www.startdaily.xyz/" target="_blank" rel="noopener noreferrer" className="footer__venture-link" id="footer-startdaily">
                 Start Daily XYZ
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
                   <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

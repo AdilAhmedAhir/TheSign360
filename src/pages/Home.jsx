@@ -274,7 +274,7 @@ export default function Home() {
           <motion.div className="agencies__grid" variants={stagger}>
             {/* Start Daily XYZ */}
             <motion.a
-              href="https://www.facebook.com/startdailyxyz"
+              href="https://www.startdaily.xyz/"
               target="_blank"
               rel="noopener noreferrer"
               className="agency-card"
@@ -284,18 +284,20 @@ export default function Home() {
             >
               <span className="agency-card__badge">Partnered Agency</span>
               <div className="agency-card__logo-wrap agency-card__logo-wrap--sd">
-                {/* Start Daily XYZ Logo — Blue gradient circle with intertwined SD */}
+                {/* Start Daily Logo — Blue circle with wave S icon */}
                 <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="sd-grad" x1="0" y1="0" x2="72" y2="72">
                       <stop offset="0%" stopColor="#3b82f6"/>
-                      <stop offset="100%" stopColor="#6366f1"/>
+                      <stop offset="100%" stopColor="#2563eb"/>
                     </linearGradient>
                   </defs>
-                  <circle cx="36" cy="36" r="34" fill="url(#sd-grad)"/>
-                  <text x="36" y="44" textAnchor="middle" fontFamily="Outfit, sans-serif" fontWeight="800" fontSize="28" fill="#fff" letterSpacing="-1">
-                    SD
-                  </text>
+                  <circle cx="36" cy="36" r="34" stroke="url(#sd-grad)" strokeWidth="2.5" fill="none"/>
+                  {/* Wave S shape */}
+                  <path d="M24 28 C24 22, 36 20, 36 28 C36 36, 48 34, 48 28" 
+                        stroke="#3b82f6" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
+                  <path d="M24 44 C24 38, 36 36, 36 44 C36 52, 48 50, 48 44" 
+                        stroke="#3b82f6" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
                 </svg>
               </div>
               <div className="agency-card__info">
@@ -303,8 +305,8 @@ export default function Home() {
                   <span className="agency-card__name-start">Start</span>{' '}
                   <span className="agency-card__name-daily">Daily</span>
                 </h3>
-                <p className="agency-card__tagline">Start Today</p>
-                <p className="agency-card__desc">Digital media & content platform driving daily engagement and modern storytelling.</p>
+                <p className="agency-card__tagline">Launch Your Vision. Start Daily.</p>
+                <p className="agency-card__desc">Custom software, AI automation, and transparent execution to help brands scale with the architecture they need.</p>
               </div>
               <span className="agency-card__arrow">
                 <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
