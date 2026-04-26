@@ -78,6 +78,19 @@ const projects = [
   },
 ]
 
+/* Gallery items — placeholder portfolio assets */
+const galleryItems = [
+  { title: 'Earth Ants Sustainovate — Event Backdrop', type: 'image', color: '#22c55e', span: 'tall' },
+  { title: 'Connec Group — Logo Animation', type: 'video', color: '#3b82f6', span: 'wide' },
+  { title: 'Foxy Vox — Brand Mockup', type: 'image', color: '#f97316', span: 'normal' },
+  { title: 'Archie — App UI Screens', type: 'image', color: '#ef4444', span: 'normal' },
+  { title: 'Seasons Street — Stationery Set', type: 'image', color: '#dc2626', span: 'tall' },
+  { title: 'AND Studio — Poster Design', type: 'image', color: '#a855f7', span: 'normal' },
+  { title: 'Corporate Event — BTS Footage', type: 'video', color: '#eab308', span: 'wide' },
+  { title: 'Earth Ants — Social Media Pack', type: 'image', color: '#22c55e', span: 'normal' },
+  { title: 'Connec Group — Presentation Deck', type: 'image', color: '#3b82f6', span: 'normal' },
+]
+
 export default function Works() {
   const [activeCategory, setActiveCategory] = useState('All')
 
@@ -193,6 +206,58 @@ export default function Works() {
                       Case Study Coming Soon
                     </span>
                   )}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </AnimatedSection>
+
+      {/* Gallery (Change 11) */}
+      <AnimatedSection className="section works-gallery-section" id="works-gallery">
+        <div className="container">
+          <motion.span className="section-label" variants={fadeUp}>Gallery</motion.span>
+          <motion.h2 className="section-title" variants={fadeUp}>
+            Visual <span className="text-accent">Portfolio</span>
+          </motion.h2>
+          <motion.p className="section-subtitle" variants={fadeUp}>
+            A showcase of our creative output across branding, digital, and media production.
+          </motion.p>
+
+          <motion.div className="gallery-grid" variants={stagger}>
+            {galleryItems.map((item, i) => (
+              <motion.div
+                key={i}
+                className={`gallery-item gallery-item--${item.span}`}
+                variants={fadeUp}
+                whileHover={{ scale: 1.02 }}
+                id={`gallery-item-${i}`}
+              >
+                <div
+                  className="gallery-item__visual"
+                  style={{ '--gallery-color': item.color }}
+                >
+                  {/* Placeholder visual */}
+                  <div className="gallery-item__placeholder">
+                    <span className="gallery-item__initial">{item.title.charAt(0)}</span>
+                  </div>
+
+                  {/* Video indicator */}
+                  {item.type === 'video' && (
+                    <div className="gallery-item__play">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </div>
+                  )}
+
+                  {/* Hover overlay */}
+                  <div className="gallery-item__overlay">
+                    <span className="gallery-item__title">{item.title}</span>
+                    <span className="gallery-item__type">
+                      {item.type === 'video' ? 'Video' : 'Image'}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             ))}

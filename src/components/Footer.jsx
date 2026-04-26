@@ -15,14 +15,14 @@ export default function Footer() {
               Ready to transform your brand? Let's create something unforgettable together.
             </p>
             <div className="footer__cta-actions">
-              <a href="mailto:hello.thedesign360@gmail.com" className="btn-primary" id="footer-contact-btn">
+              <Link to="/contact" className="btn-primary" id="footer-contact-btn">
                 Contact Us
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </a>
-              <a href="tel:+8801948992090" className="btn-outline" id="footer-call-btn">
-                Call Now
+              </Link>
+              <a href="https://cal.com/thesign/discovery-call" target="_blank" rel="noopener noreferrer" className="btn-outline" id="footer-call-btn">
+                Book A Call
               </a>
             </div>
           </div>

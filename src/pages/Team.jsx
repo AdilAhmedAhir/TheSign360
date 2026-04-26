@@ -39,11 +39,48 @@ const teamMembers = [
   { initials: 'CM', role: 'Content Manager', dept: 'Marketing' },
 ]
 
+const DeptIcon = ({ type }) => {
+  const icons = {
+    design: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
+      </svg>
+    ),
+    engineering: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+        <line x1="14" y1="4" x2="10" y2="20" />
+      </svg>
+    ),
+    marketing: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      </svg>
+    ),
+    production: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+        <line x1="7" y1="2" x2="7" y2="22" />
+        <line x1="17" y1="2" x2="17" y2="22" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <line x1="2" y1="7" x2="7" y2="7" />
+        <line x1="2" y1="17" x2="7" y2="17" />
+        <line x1="17" y1="7" x2="22" y2="7" />
+        <line x1="17" y1="17" x2="22" y2="17" />
+      </svg>
+    ),
+  }
+  return <span className="dept-card__icon">{icons[type]}</span>
+}
+
 const departments = [
-  { name: 'Design', count: '8+', icon: '🎨' },
-  { name: 'Engineering', count: '6+', icon: '💻' },
-  { name: 'Marketing', count: '5+', icon: '📈' },
-  { name: 'Production', count: '4+', icon: '🎬' },
+  { name: 'Design', count: '8+', iconType: 'design' },
+  { name: 'Engineering', count: '6+', iconType: 'engineering' },
+  { name: 'Marketing', count: '5+', iconType: 'marketing' },
+  { name: 'Production', count: '4+', iconType: 'production' },
 ]
 
 export default function Team() {
@@ -99,7 +136,7 @@ export default function Team() {
                 whileHover={{ y: -4 }}
                 id={`dept-card-${i}`}
               >
-                <span className="dept-card__icon">{dept.icon}</span>
+                <DeptIcon type={dept.iconType} />
                 <div>
                   <h3 className="dept-card__name">{dept.name}</h3>
                   <span className="dept-card__count">{dept.count} Members</span>

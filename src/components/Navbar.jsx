@@ -8,6 +8,7 @@ const navLinks = [
   { path: '/about', label: 'About' },
   { path: '/team', label: 'Team' },
   { path: '/works', label: 'Works' },
+  { path: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -58,9 +59,9 @@ export default function Navbar() {
             ))}
           </div>
 
-          <a href="mailto:hello.thedesign360@gmail.com" className="navbar__cta btn-primary" id="nav-cta">
+          <Link to="/contact" className="navbar__cta btn-primary" id="nav-cta">
             Contact Us
-          </a>
+          </Link>
 
           <button
             className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
@@ -110,9 +111,9 @@ export default function Navbar() {
                 transition={{ delay: 0.4, duration: 0.4 }}
                 className="mobile-menu__cta"
               >
-                <a href="mailto:hello.thedesign360@gmail.com" className="btn-primary">
+                <Link to="/contact" className="btn-primary">
                   Contact Us
-                </a>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

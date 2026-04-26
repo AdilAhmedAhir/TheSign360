@@ -60,7 +60,13 @@
 }
 
 .dept-card__icon {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 .dept-card__name {

@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Team from './pages/Team'
 import Works from './pages/Works'
+import Contact from './pages/Contact'
 import './App.css'
 
 function AnimatedRoutes() {
@@ -17,6 +18,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
         <Route path="/works" element={<Works />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
   )
