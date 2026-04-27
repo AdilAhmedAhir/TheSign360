@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Internal docs
+TheSign Changes.md
+TheSign Changes.pdf
+*.pdf
