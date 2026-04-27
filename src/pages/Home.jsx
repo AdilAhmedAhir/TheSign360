@@ -167,8 +167,8 @@ export default function Home() {
             </div>
 
             {/* Shiny text animation (Change 5) */}
-            <h1 className="hero__title">
-              <span className="hero__title-line shiny-text">360 Solution</span>
+            <h1 className="hero__title shiny-text">
+              <span className="hero__title-line">360 Solution</span>
               <span className="hero__title-line">
                 For Your <span className="hero__title-accent">Brand</span>
               </span>
